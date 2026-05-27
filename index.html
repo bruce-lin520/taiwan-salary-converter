@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>台币工资换算 · 台北 vs 上海</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>台币工资换算</h1>
+    <p class="subtitle">税前月薪 · 台北 ↔ 上海生活成本参考</p>
+
+    <label for="salary">月薪（新台币 TWD）</label>
+    <input
+      id="salary"
+      type="number"
+      inputmode="numeric"
+      placeholder="例如 50000"
+      min="0"
+    />
+
+    <section class="result" aria-live="polite">
+      <p>折合人民币（税前）：<strong id="cny">—</strong></p>
+      <p class="rate-note">汇率：<span id="rate">加载中…</span></p>
+    </section>
+
+    <section class="compare">
+      <h2>生活成本对比（仅供参考）</h2>
+      <div id="cost-table"></div>
+    </section>
+
+    <footer>
+      <small>数据为示意参考，非实时物价；汇率来自公开接口。</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
